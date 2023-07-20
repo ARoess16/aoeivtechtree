@@ -1,5 +1,18 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-content {
+  flex: 1;
+}
+
+.is-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .App-logo {
@@ -85,5 +98,54 @@ body {
 
 .mainbg {
   background-color: #151824;
-  border-color: #d4ad58;
+  border: 4px solid #d4ad58;
+}
+
+.cardflags {
+  background-color: #151824;
+}
+
+.has-text-gold {
+  color: #d4ad58;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.columns.is-fullheight {
+  flex: 1;
+}
+
+.main {
+  overflow-y: auto;
+}
+
+.is-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.leftside-font-size {
+  font-size: 20px;
+}
+
+.bpcss {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.leftsidecss {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #151824;
+  border: 4px solid #d4ad58;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }

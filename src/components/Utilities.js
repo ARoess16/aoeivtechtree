@@ -1,8 +1,21 @@
 import Papa from "papaparse";
+import { Redirect } from "react-router-dom";
 
 //importing CSVs
 import engTree from "../CSV/ENG Buildings.csv";
 import leftSideInfo from "../CSV/LeftSide Info.csv";
+
+//importing flag images
+import ABBflag from "./images/ABBflag.png";
+import CHIflag from "./images/CHIflag.png";
+import DELflag from "./images/DELflag.png";
+import ENGflag from "./images/ENGflag.png";
+import FREflag from "./images/FREflag.png";
+import HREflag from "./images/HREflag.png";
+import MALflag from "./images/MALflag.png";
+import MONflag from "./images/MONflag.png";
+import OTTflag from "./images/OTTflag.png";
+import RUSflag from "./images/RUSflag.png";
 
 //Civ Directory start
 //let civDirectory = {};
@@ -31,19 +44,13 @@ class rightSide {
   }
 }
 
-export async function buildObjectFromCSV() {
+export async function buildDirectories() {
   try {
     const response = await fetch(leftSideInfo);
     const csvText = await response.text();
 
     const parsedData = Papa.parse(csvText, { header: true }).data;
-
-    // Process the parsed data as needed
-
-    // Build the object using processed data
     const civDirectory = {};
-
-    // Construct your object based on the processed data
 
     parsedData.forEach((row) => {
       const {
@@ -85,8 +92,6 @@ export async function buildObjectFromCSV() {
         }
       }
 
-      //console.log("Bp:", bulletPoints);
-
       civDirectory[ID] = {
         DisplayName,
         Dates,
@@ -96,11 +101,10 @@ export async function buildObjectFromCSV() {
       };
     });
 
-    // Return or use the resulting object
+    //console.log(civDirectory);
     return civDirectory;
   } catch (error) {
     console.error("Error parsing CSV:", error);
-    // Handle the error appropriately
   }
 }
 
@@ -110,8 +114,18 @@ export async function utilitiesfinished() {
   return result;
 }
 
-export function updateCurrentSelection(event, setCurrentSelection) {
+export function updateCurrentSelection(event) {
   const selectedID = event.currentTarget.id;
-  setCurrentSelection(selectedID);
-  console.log("update to Civ selection:", setCurrentSelection);
+  toString(selectedID);
+  localStorage.setItem("curSEL", selectedID);
+  console.log("update to Current Selection:", localStorage.getItem("curSEL"));
+}
+
+export function goToCivTree() {
+  return new Promise((resolve, reject) => {
+    console.log("go to civtree function start.");
+    window.location.href = "/civtree";
+    console.log("go to civtree function end.");
+    resolve();
+  });
 }

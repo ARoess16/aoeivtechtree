@@ -1,5 +1,8 @@
 import React from "react";
 
+import "bulma/css/bulma.min.css";
+import "../App.css";
+
 function Header() {
   return (
     <header>
