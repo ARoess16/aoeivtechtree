@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "bulma/css/bulma.min.css";
 import "../App.css";
@@ -15,7 +16,7 @@ import OTTflag from "./images/OTTflag.png";
 import RUSflag from "./images/RUSflag.png";
 import { updateCurrentSelection } from "./Utilities";
 
-function Main() {
+function Main(props) {
   const [civtiles, setcivtiles] = useState([
     { Name: "Abbasid Dynasty", id: "ABB", value: "ABB", img: ABBflag },
     { Name: "Chinese", id: "CHI", value: "CHI", img: CHIflag },
@@ -31,21 +32,22 @@ function Main() {
 
   const topROW = [];
   const bottomROW = [];
+  console.log("local storage in Main:", localStorage.getItem("curSEL"));
 
   function createCivTiles(i) {
     var civ = [];
 
     civ.push(
-      <a href="civtree">
-        <div className="column">
+      <div className="column">
+        <Link to="/civtree">
           <div
-            className="card fixedwidth p-4 shadow-md is-cursor-pointer transform is-duration-300 hover-shadow-xl hover-translate-y"
+            className="card fixedwidth p-1 shadow-md is-cursor-pointer transform is-duration-300 hover-shadow-xl hover-translate-y cardflags"
             value={civtiles[i].value}
             id={civtiles[i].id}
             title={civtiles[i].Name}
-            onClick={(event) => updateCurrentSelection(event, civtiles.id)}
+            onClick={(event) => updateCurrentSelection(event)}
           >
-            <div className="card-image">
+            <div className="card-image mainbg">
               <figure className="image">
                 <img
                   className="object-contain"
@@ -55,13 +57,13 @@ function Main() {
               </figure>
             </div>
             <div>
-              <div className="content has-text-weight-bold has-text-grey has-text-centered">
+              <div className="content has-text-weight-bold has-text-gold has-text-centered">
                 {civtiles[i].Name}
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </Link>
+      </div>
     );
     return civ;
   }
@@ -73,14 +75,16 @@ function Main() {
   for (let i = civtiles.length / 2; i < civtiles.length; i++) {
     bottomROW.push(createCivTiles(i));
   }
-  // <div className="grid h-9/10 content-start justify-center gap-y-12 border-[10px] border-[#D4AD58] bg-[#151824] bg-cover">
+
   return (
     <div className="">
       <h1 className="title is-2 has-text-gold has-text-centered ">
         Age of Empires IV Tech Tree
       </h1>
-      <div className="columns is-justify-content-center">{topROW}</div>
-      <div className="columns is-justify-content-center">{bottomROW}</div>
+      <div className="container is-9">
+        <div className="columns is-justify-content-center">{topROW}</div>
+        <div className="columns is-justify-content-center">{bottomROW}</div>
+      </div>
     </div>
   );
 }

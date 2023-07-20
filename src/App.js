@@ -11,49 +11,60 @@ import CivTree from "./components/CivTree.js";
 
 import * as Utilities from "./components/Utilities.js";
 
+//local storage
+localStorage.setItem("curSEL", "ABB");
+const asdf = localStorage.getItem("curSEL");
+// console.log("Local Storage:", localStorage.getItem("curSEL"));
+
 function App() {
-  const [currentSelection, setCurrentSelection] = useState("ENG");
-  const [civDirectory, setCivDirectory] = useState();
+  //const [currentSelection, setCurrentSelection] = useState("ENG");
+  const [civDirectoryFinal, setCivDirectoryFinal] = useState();
 
   useEffect(() => {
     console.log("Component has mounted");
-    Utilities.buildObjectFromCSV().then((retDir) => {
+    Utilities.buildDirectories().then((retObj) => {
       console.log("utilities ran:");
-      setCivDirectory(retDir.civDirectory);
-      console.log(civDirectory);
+      setCivDirectoryFinal(retObj);
+      console.log(retObj);
+      console.log(
+        "local storage in useEFfect:",
+        localStorage.getItem("curSEL")
+      );
     });
   }, []);
 
+  // console.log("2nd obj outsideUSEeffect:", civDirectoryFinal);
+
   return (
-    <div className="columns is-flex-direction-column is-fullheight-100vh">
+    <div className="App is-flex-direction-column">
       <Header className="column is-narrow" />
 
-      <Router>
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <Main
-                className="column"
-                currentSelection={currentSelection}
-                setCurrentSelection={setCurrentSelection}
-              />
-            }
-          ></Route>
-          <Route
-            path="/civtree"
-            element={
-              <CivTree
-                className="column"
-                currentSelection={currentSelection}
-                setCurrentSelection={setCurrentSelection}
-                civDirectory={civDirectory}
-              />
-            }
-          ></Route>
-        </Routes>
-      </Router>
+      <main className="App-content mainbg">
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  className="column"
+                  civDirectoryFinal={civDirectoryFinal}
+                  setCivDirectoryFinal={setCivDirectoryFinal}
+                />
+              }
+            ></Route>
+            <Route
+              path="/civtree"
+              element={
+                <CivTree
+                  className="column"
+                  civDirectoryFinal={civDirectoryFinal}
+                  setCivDirectoryFinal={setCivDirectoryFinal}
+                />
+              }
+            ></Route>
+          </Routes>
+        </Router>
+      </main>
 
       <Footer className="column is-narrow" />
     </div>
