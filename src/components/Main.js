@@ -16,20 +16,22 @@ import OTTflag from "./images/OTTflag.png";
 import RUSflag from "./images/RUSflag.png";
 import { updateCurrentSelection } from "./Utilities";
 
-function Main(props) {
-  const [civtiles, setcivtiles] = useState([
-    { Name: "Abbasid Dynasty", id: "ABB", value: "ABB", img: ABBflag },
-    { Name: "Chinese", id: "CHI", value: "CHI", img: CHIflag },
-    { Name: "Delhi Sultanate", id: "DEL", value: "DEL", img: DELflag },
-    { Name: "English", id: "ENG", value: "ENG", img: ENGflag },
-    { Name: "French", id: "FRE", value: "FRE", img: FREflag },
-    { Name: "Holy Roman Empire", id: "HRE", value: "HRE", img: HREflag },
-    { Name: "Malians", id: "MAL", value: "MAL", img: MALflag },
-    { Name: "Mongols", id: "MON", value: "MON", img: MONflag },
-    { Name: "Ottomans", id: "OTT", value: "OTT", img: OTTflag },
-    { Name: "Rus", id: "RUS", value: "RUS", img: RUSflag },
-  ]);
+export const civtiles = [
+  { Name: "Abbasid Dynasty", id: "ABB", value: "ABB", img: ABBflag },
+  { Name: "Chinese", id: "CHI", value: "CHI", img: CHIflag },
+  { Name: "Delhi Sultanate", id: "DEL", value: "DEL", img: DELflag },
+  { Name: "English", id: "ENG", value: "ENG", img: ENGflag },
+  { Name: "French", id: "FRE", value: "FRE", img: FREflag },
+  { Name: "Holy Roman Empire", id: "HRE", value: "HRE", img: HREflag },
+  { Name: "Malians", id: "MAL", value: "MAL", img: MALflag },
+  { Name: "Mongols", id: "MON", value: "MON", img: MONflag },
+  { Name: "Ottomans", id: "OTT", value: "OTT", img: OTTflag },
+  { Name: "Rus", id: "RUS", value: "RUS", img: RUSflag },
+];
 
+console.log("Main.js Civtiles:", civtiles);
+
+function Main(props) {
   const topROW = [];
   const bottomROW = [];
   console.log("local storage in Main:", localStorage.getItem("curSEL"));

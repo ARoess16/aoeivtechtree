@@ -17,14 +17,15 @@ const asdf = localStorage.getItem("curSEL");
 // console.log("Local Storage:", localStorage.getItem("curSEL"));
 
 function App() {
-  //const [currentSelection, setCurrentSelection] = useState("ENG");
+  const [tileDirectory, setTileDirectory] = useState();
   const [civDirectoryFinal, setCivDirectoryFinal] = useState();
 
   useEffect(() => {
     console.log("Component has mounted");
     Utilities.buildDirectories().then((retObj) => {
       console.log("utilities ran:");
-      setCivDirectoryFinal(retObj);
+      setCivDirectoryFinal(retObj.civDirectory);
+      setTileDirectory(retObj.tileInfoDirectory);
       console.log(retObj);
       console.log(
         "local storage in useEFfect:",

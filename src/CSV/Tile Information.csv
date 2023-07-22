@@ -1,0 +1,121 @@
+unitID,unitdisplayname,cost,stats,startingage,upgradeto,unique,tiletype
+longbowman,Longbowman,0:15T 40F 50W,asdf,2,vetlongbowman,y,unit
+vetlongbowman,Veteran Longbowman,0:15T 40F 50W,asdf,3,elitelongbowman,y,unit
+elitelongbowman,Elite Longbowman,0:15T 40F 50W,asdf,4,,y,unit
+arrowvolley,Arrow Volley,1:00T 150W 350G,,4,,y,tech
+archer,Archer,0:15T 30F 50W,,2,vetarcher,n,unit
+vetarcher,Veteran Archer,0:15T 30F 50W,,3,elitearcher,n,unit
+elitearcher,Elite Archer,0:15T 30F 50W,,4,vetarcher,n,unit
+xbowman,Crossbowman,0:23T 80F 40G,,3,elitexbowman,n,unit
+elitexbowman,Elite Crossbowman,0:23T 80F 40G,,4,,n,unit
+handcannon,Handcannoneer,0:35T 120F 120G,,4,,n,unit
+vanmaa,Vanguard Man-at-Arms,22.5T 100F 20G,,1,earlymaa,y,unit
+earlymaa,Early Man-at-Arms,22.5T 100F 20G,,2,maa,y,unit
+maa,Man-at-Arms,22.5T 100F 20G,,3,elitemaa,n,unit
+elitemaa,Elite Man-at-Arms,22.5T 100F 20G,,4,,n,unit
+spearman,Spearman,0:15T 60F 20W,,1,hardspear,n,unit
+hardspear,Hardened Spearman,0:15T 60F 20W,,2,vetspear,n,unit
+vetspear,Veteran Spearman,0:15T 60F 20W,,3,elitespear,n,unit
+elitespear,Elite Spearman,0:15T 60F 20W,,4,,n,unit
+armorclad,Armor Clad,1:00T 150F 350G,,3,,y,tech
+scout,Scout,0:25T 70F,,1,,n,unit
+malscout,Scout,0:25T 70F,,1,,n,unit
+warscout,Warrior Scout,0:25T 70F,,2,,y,unit
+horseman,Horseman,0:23T 100F 20W,,2,vethorseman,n,unit
+vethorseman,Veteran Horseman,0:23T 100F 20W,,3,elitehorseman,n,unit
+elitehorseman,Elite Horseman,0:23T 100F 20W,,4,,n,unit
+knight,Knight,0:35T 140F 100G,,3,eliteknight,n,unit
+eliteknight,Elite Knight,0:35T 140F 100G,,4,,n,unit
+king,King,0:35T 100F 100G,,2,,y,unit
+vill,Villager,0:20T 50F,,1,,n,unit
+textiles,Textiles,0:20T 50F 100G,,2,,n,tech
+tc,Town Center,2:30T 400W 350S,,2,,n,build
+ctc,Capital Town Center,,,1,,n,lm
+abbeyofkings,Abbey of Kings,3:10T 400F 200G,"Heals all nearby friendly units that are out of combat by +6 every 1 seconds. May also Crown a King, a powerful cavalry leader with an out of combat healing aura.",1,,y,lm
+councilhall,Council Hall,3:10T 400F 200G,Acts as an Archery Range with all units and technologies. Works +100% faster.,1,,y,lm
+kingspalace,King's Palace,3:40T 1200F 600G,"Acts as a Town Center with all the behaviors, technology, units, and bonuses.",2,,y,lm
+thewhitetower,The White Tower,3:40T 1200F 600G,"Acts as a Keep with all the behaviors, technologies, and bonuses. Works 100% faster.",2,,y,lm
+berkshirepalace,Berkshire Palace,4:10T 2400F 1200G,Acts as a Keep with increased health and powerful incendiary arrows. All weapons have 15 tiles of range.,3,,y,lm
+wynguardpalace,Wynguard Palace,4:10T 2400F 1200G,"Allows production of 4 battalions: Wynguard Army, Wynguard Rangers, and Wynguard Raiders, and Wynguard Footmen.",3,,y,lm
+landmarks,Landmarks,,,,,,lm
+barracks,Barracks,0:30T 150W,Produces melee infantry units.,1,,n,build
+archeryrange,Archery Range,0:30T 150W,Produces ranged infantry units.,2,,n,build
+stable,Stable,0:30T 150W,Produces cavalry military units.,2,,n,build
+blacksmith,Blacksmith,0:25T 150W,Houses technology to improve infantry and cavalry.,2,,n,build
+siegeworkshop,Siege Workshop,0:45T 300W,Produces siege engines and powerful gunpowder units.,3,,n,build
+dock,Dock,0:30T 150W,Produces naval units. Automatically repairs nearby damaged naval units. Capable of holding up to three Fishing Ships.,1,,n,build
+mill,Mill,0:20T 50W,Villagers can drop off Food at this building. Houses technologies to improve Food gathering.,1,,n,build
+lumbercamp,Lumber Camp,0:20T 50W,Villagers can drop off Wood at this building. Houses technologies to improve Wood gathering.,1,,n,build
+miningcamp,Mining Camp,0:20T 50W,Villagers can drop off Stone and Gold at this building. Houses technologies to improve mining.,1,,n,build
+house,House,0:15T 50W,Increases your maximum Population.,1,,n,build
+palisadewall,Palisade Wall,0:04T 7W,"Light defensive wall for quickly fortifying an area. Initially costs 21 Wood, with each additional section costing 7 Wood.",1,,n,build
+palisadegate,Palisade Gate,0:10T 25W,Light defensive gate. Must be built on a Palisade Wall segment.,1,,n,build
+outpost,Outpost,1:00T 100W,Offers extensive line of sight. Can be upgraded with weaponry and fortifications. Attacks while garrisoned.,1,,n,build
+market,Market,0:20T 20W,Allows the buying and selling of resources and produces the Trader.,2,,n,build
+stonewall,Stone Wall,0:16T 20S,Sturdy wall that cannot be attacked by torches. units on walls take 66% less damage from ranged attacks and their range is increased by +2.,2,,n,build
+stonewallgate,Stone Wall Gate,0:30T 50S,Heavy defensive gate. Must be built on a Stone Wall segment. Infantry can use the gate to access the top of the walls.,2,,n,build
+stonewalltower,Stone Wall Tower,1:30T 300S,Heavy defensive tower that fires a springald. Must be built on a Stone Wall segment. Infantry can use the tower to access the top of the walls.,2,,n,build
+keep,Keep,3:00T 800S,Heavy garrison and defensible position. Can be upgraded with weaponry. Adds additional attacks while garrisoned.,3,,n,build
+monastery,Monastery,0:25T 200W,"Produces religious units and houses religious technologies. Starting in the Castle Age (III), religious units can pick up Relics and place them in this building to generate Gold.",3,,n,build
+university,University,1:00T 450W,Houses advanced technology that benefit the civilization.,4,,n,build
+bloomery,Bloomery,1:00T 50F 125G,Increase the melee damage of all non-siege units by +1.,2,decarb,n,tech
+decarb,Decarbonization,1:00T 100F 250G,Increase the melee damage of all non-siege units by +1.,3,dama,n,tech
+dama,Damasccus Steel,1:00T 150F 350G,Increase the melee damage of all non-siege units by +1.,4,,n,tech
+steeledarrow,Steeled Arrow,1:00T 50F 125G,Increase the ranged damage of all non-siege units and buildings by +1.,2,balprojectiles,n,tech
+balprojectiles,Balanced Projectiles,1:00T 100F 250G,Increase the ranged damage of all non-siege units and buildings by +1.,3,platepoint,n,tech
+platepoint,Platecutter Point,1:00T 150F 350G,Increase the ranged damage of all non-siege units and buildings by +1.,4,,n,tech
+fittedleatherwork,Fitted Leatherwork,1:00T 50F 125G,Increase the melee armor of all non-siege units by +1.,2,insulhelm,n,tech
+insulhelm,Insulated Helm,1:00T 100F 250G,Increase the melee armor of all non-siege units by +1.,3,mastsmith,n,tech
+mastsmith,Master Smiths,1:00T 150F 350G,Increase the melee armor of all non-siege units by +1.,4,,n,tech
+ironundermesh,Iron Undermesh,1:00T 50F 125G,Increase the ranged armor of all non-siege units by +1.,2,wedriv,n,tech
+wedriv,Wedge Rivets,1:00T 50F 125G,Increase the ranged armor of all non-siege units by +1.,3,angsurf,n,tech
+angsurf,Angled Surfaces,1:00T 50F 125G,Increase the ranged armor of all non-siege units by +1.,4,,n,tech
+siegeengineering,Siege Engineering,0:30T 50W 125G,Melee and ranged infantry can construct Siege Towers and Battering Rams in the field.,2,,n,tech
+militaryacademy,Military Academy,1:00T 100W 250G,"Increase the production speed of infantry, cavalry, siege, and transport units at buildings by 33%. Does not affect religious units or other support units.",3,,n,tech
+batteringram,Battering Ram,0:30T 250W,,3,,n,unit
+springald,Springald,0:30T 250W 250G,,3,,n,unit
+mangonel,Mangonel,0:40T 400W 200G,,3,,n,unit
+counterweighttrebuchet,Counterweight Trebuchet,0:30T 400W 150G,,3,,n,unit
+bombard,Bombard,0:45T 300W 600G,,4,,n,unit
+ribauldequin,Ribauldequin,0:45T 300W 600G,,4,,n,unit
+rollershuttertriggers,Roller Shutter Triggers,1:00T 150W 350G,Increase the weapon range of Springalds by +2 tiles and increase their attack speed by +25%.,4,,n,tech
+adjustablecrossbars,Adjustable Crossbars,1:30T 200W 500G,Increase the attack speed of Mangonels by +25%.,4,,n,tech
+shatteringprojectiles,Shattering Projectiles,1:30T 300W 700G,"Trebuchet projectiles shatter on impact, increasing their area of effect.",4,,y,tech
+greasedaxles,Greased Axles,1:00T 150W 350G,Increase the movement speed of siege engines by +15%.,3,,n,tech
+geometry,Geometry,0:45T 100W 225G,Increase damage of Trebuchets by +20%.,4,,n,tech
+lightweightbeams,Lightweight Beams,1:00T 300W 400G,Increase Battering Ram attack speed by +40% and reduce their field construction time by -50%.,4,,n,tech
+horticulture,Horticulture,0:45T 50W 100G,Increase Villagers' gathering rate for Food by 15%. Does not apply to hunted meat.,2,fert,n,tech
+fert,Fertilization,1:00T 100W 250G,Increase Villagers' gathering rate for Food by 15%. Does not apply to hunted meat.,3,precross,n,tech
+precross,Precision Cross-Breeding,1:15T 250W 500G,Increase Villagers' gathering rate for Food by 15%. Does not apply to hunted meat.,4,,n,tech
+wheelbarrow,Wheelbarrow,1:30T 50W 150G,Increase the carry capacity of Villagers by +5 and their movement speed by +15%.,1,,n,tech
+survivaltechniques,Survival Techniques,0:25T 25W 75G,Increase Villagers' hunted meat gather rate by +15%.,1,,n,tech
+professionalscouts,Professional Scouts,1:15T 75W 275G,Scouts gain the ability to carry animal carcasses and +100% damage against wild animals. Scouts move -35% slower while carrying and cannot pick up Boar.,2,,n,tech
+enclosures,Enclosures,1:00T 150W 350G,Each Farm Enclosure being worked by a Villager generates +1 Gold every 5 seconds.,4,,y,tech
+forestry,Forestry,0:45T 25F 50G,Double the rate at which Villagers chop down trees.,1,,n,tech
+doublebroadaxe,Double Broadaxe,0:45T 50F 100G,Increase Villagers' gathering rate for Wood by 15%.,2,lumbpres,n,tech
+lumbpres,Lumber Preservation,1:00T 100W 250G,Increase Villagers' gathering rate for Wood by 15%.,3,crosssaw,n,tech
+crosssaw,Crosscut Saw,1:15T 250W 500G,Increase Villagers' gathering rate for Wood by 15%.,4,,n,tech
+specializedpick,Specialized Pick,0:45T 50F 100G,Increase Villagers' gathering rate for Gold and Stone by 15%.,2,aciddist,n,tech
+aciddist,Acid Distillation,1:00T 100W 250G,Increase Villagers' gathering rate for Gold and Stone by 15%.,3,cupell,n,tech
+cupell,Cupellation,1:15T 250W 500G,Increase Villagers' gathering rate for Gold and Stone by 15%.,4,,n,tech
+fortifyoutpost,Fortify Outpost,0:30T 100S,Add +1000 health and +5 fire armor to this Outpost.,2,,n,tech
+arrowslits,Arrowslits,0:30T 25G 50S,Add defensive arrowslits to this structure and increase garrison arrow range by +1. Only one weapon emplacement can be added.,2,,n,tech
+springaldemplacement,Springald Emplacement,0:30T 50G 125S,Add a defensive springald emplacement to this structure.,3,,n,tech
+cannonemplacement,Cannon Emplacement,1:00T 125G 375S,Add a defensive cannon emplacement to this structure.,4,,n,tech
+trader,Trader,0:25T 60W 60G,"Traders generate Gold when assigned to trade with a Trade Post or another player’s Market. The distance between the trade target and Market determines the amount of Gold. Once assigned to trade, the Trader makes repeated trips between its Home Market and the trade target. You can assign a new Home Market if you wish to.",2,,n,unit
+networkofcitadels,Network of Citadels,0:45T 350G 150S,Increase the Network of Castles attack speed bonus from +20% to +40%.,3,,y,tech
+boilingoil,Boiling oil,1:30T 500G 200S,Towers and Keeps gain a boiling oil attack against nearby units that deals 30 damage.,3,,n,tech
+monk,Monk,0:30T 150G,,3,,n,unit
+herbalmedicine,Herbal Medicine,0:45T 275G,Increase the healing rate of religious units by +60%.,3,,n,tech
+piety,Piety,0:45T 325G,Increase the health of religious units by +40.,4,,n,tech
+tithebarns,Tithe Barns,1:00T 500G,"Relics placed in a Monastery provide an income of +30 Food, +30 Wood, and +30 Stone every minute.",4,,n,tech
+chemistry,Chemistry,1:30T 300F 700G,Increase the damage of gunpowder units by +20%.,4,,n,tech
+siegeworks,Siege Works,1:30T 300W 700G,Increase the health of siege engines by +20% and their ranged armor by +10.,4,,n,tech
+biology,Biology,1:30T 300F 700G,Increase the health of all cavalry by +20%.,4,,n,tech
+incendiaryarrows,Incendiary Arrows,1:30T 300W 700G,Increase the damage of ranged units by +20%. Does not apply to gunpowder units.,4,,n,tech
+courtarchitects,Court Architects,1:30T 700G 300S,Increase the health of all buildings by +30%.,4,,n,tech
+elitearmytactics,Elite Army Tactics,1:30T 300F 700G,Increase the health of all melee infantry by +20% and their damage by +20%.,4,,n,tech
+wyngardarmy,Wyngard Army,1:15T 100F 100W 200G,"Produces an army including two Spearmen, two Crossbowmen, and a Trebuchet.",4,,y,unit
+wynguardraiders,Wynguard Raiders,0:25T 650F 200G,Produces an army of 3 Horsemen and 3 Knights.,4,,y,unit
+wynguardrangers,Wynguard Rangers,0:50T 450W 250G,Produces an army of 6 Wynguard Rangers.,4,,y,unit
+wynguardfootmen,Wynguard Footmen,0:50T 200F 500G,Produces an army of 6 Wynguard Footmen.,4,,y,unit

@@ -14,7 +14,7 @@ function CivTree(props) {
   return (
     <div className="is-flex is-flex-direction-column">
       <div className="columns is-fullheight is-align-items-flex-start">
-        <div className="column is-one-fifth">
+        <div className="column is-one-fourth">
           <LeftSide
             civDirectoryFinal={props.civDirectoryFinal}
             setCurrentSelectionFinal={props.setCivSelectionFinal}

@@ -92,6 +92,10 @@ body {
   width: 300px;
 }
 
+.leftsideflagwidth {
+  width: 50;
+}
+
 .is-fullheight-100vh {
   height: 100vh;
 }
@@ -135,12 +139,12 @@ body,
 }
 
 .bpcss {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
 }
 
 .leftsidecss {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
   background-color: #151824;
@@ -148,4 +152,71 @@ body,
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+.dropdown {
+  /* Set the font size and color */
+  font-size: 16px;
+  color: #333;
+  /* Set the width of the select element */
+  width: 50%;
+  /* Add some padding to make it look nicer */
+  padding: 8px;
+  /* Set the border to have rounded corners */
+  border-radius: 4px;
+  /* Remove the default arrow that appears in some browsers */
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #151824;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* Style the options within the dropdown */
+select option {
+  /* Set the font size and color of the options */
+  font-size: 14px;
+  color: #555;
+}
+
+/* Style the dropdown when it's open */
+select:focus {
+  /* Add a border around the select element when it's in focus */
+  border: 1px solid #007bff;
+  /* You can add more styles here to customize the appearance when the select is open */
+}
+
+/* Style the dropdown arrow */
+select::-ms-expand {
+  /* Remove the default arrow in Internet Explorer */
+  display: none;
+}
+
+select::after {
+  /* Create a custom arrow using a pseudo-element after the select element */
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0;
+  border-color: #333 transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* Style the dropdown list */
+select option:checked {
+  /* Set the background color of the selected option */
+  background-color: #007bff;
+  /* Set the font color of the selected option */
+  color: #fff;
+}
+
+.column.is-one-fourth {
+  flex: none;
+  width: 25%; /* 4 columns will take up 25% of the container width */
+  max-width: 25%; /* Ensure the column won't grow beyond 25% */
 }
