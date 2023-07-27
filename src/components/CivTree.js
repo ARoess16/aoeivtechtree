@@ -7,21 +7,29 @@ function CivTree(props) {
   if (!props.civDirectoryFinal) {
     return <div>Loading...</div>;
   }
+  //const currentSelection = props.currentSelection;
 
-  const helpplease = props.civDirectoryFinal;
-  console.log("CivTree Directory:", helpplease);
+  const helpplease = props.tileInfoDirectory;
+  console.log("CivTree tile Directory:", helpplease);
 
   return (
-    <div className="is-flex is-flex-direction-column">
+    <div className="is-fullheight is-flex is-flex-direction-column">
       <div className="columns is-fullheight is-align-items-flex-start">
-        <div className="column is-one-fourth">
+        <div className="column is-fullheight is-one-fourth">
           <LeftSide
             civDirectoryFinal={props.civDirectoryFinal}
             setCurrentSelectionFinal={props.setCivSelectionFinal}
+            currentSelection={props.currentSelection}
           />
         </div>
         <div className="column">
-          <RightSide />
+          <RightSide
+            civDirectoryFinal={props.civDirectoryFinal}
+            setCurrentSelectionFinal={props.setCivSelectionFinal}
+            currentSelection={props.currentSelection}
+            tileInfoDirectory={props.tileInfoDirectory}
+            setTileInfoDirectory={props.setTileInfoDirectory}
+          />
         </div>
       </div>
     </div>

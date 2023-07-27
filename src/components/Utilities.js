@@ -141,6 +141,9 @@ export async function buildDirectories() {
       }
     }
 
+    civDirectory["ENG"]["Buildings"] = engBuildings;
+    civDirectory["ENG"]["BuildOrder"] = engBuildingOrder;
+
     // // Populate Buildings for the ENG civilization
     // if (engTreeData.length > 0 && engTreeData[0].length > 0) {
     //   const buildingsData = engTreeData[0][0];
@@ -194,8 +197,7 @@ export async function utilitiesfinished() {
   return result;
 }
 
-export function updateCurrentSelection(event) {
-  const selectedID = event.currentTarget.id;
+export function updateCurrentSelection(selectedID) {
   toString(selectedID);
   localStorage.setItem("curSEL", selectedID);
   console.log("update to Current Selection:", localStorage.getItem("curSEL"));

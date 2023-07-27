@@ -13,11 +13,11 @@ import * as Utilities from "./components/Utilities.js";
 
 //local storage
 localStorage.setItem("curSEL", "ABB");
-const asdf = localStorage.getItem("curSEL");
+
 // console.log("Local Storage:", localStorage.getItem("curSEL"));
 
 function App() {
-  const [tileDirectory, setTileDirectory] = useState();
+  const [tileInfoDirectory, setTileInfoDirectory] = useState();
   const [civDirectoryFinal, setCivDirectoryFinal] = useState();
 
   useEffect(() => {
@@ -25,8 +25,9 @@ function App() {
     Utilities.buildDirectories().then((retObj) => {
       console.log("utilities ran:");
       setCivDirectoryFinal(retObj.civDirectory);
-      setTileDirectory(retObj.tileInfoDirectory);
-      console.log(retObj);
+      setTileInfoDirectory(retObj.tileInfoDirectory);
+      console.log("tileInfoDirectory:", tileInfoDirectory);
+      console.log("civDirectoryFinal:", civDirectoryFinal);
       console.log(
         "local storage in useEFfect:",
         localStorage.getItem("curSEL")
@@ -34,6 +35,14 @@ function App() {
     });
   }, []);
 
+  const [currentSelection, setCurrentSelection] = useState(
+    localStorage.getItem("curSEL")
+  );
+
+  useEffect(() => {
+    // Update the state whenever currentSelection prop changes
+    setCurrentSelection(localStorage.getItem("curSEL"));
+  }, [localStorage.getItem("curSEL")]);
   // console.log("2nd obj outsideUSEeffect:", civDirectoryFinal);
 
   return (
@@ -60,6 +69,9 @@ function App() {
                   className="column"
                   civDirectoryFinal={civDirectoryFinal}
                   setCivDirectoryFinal={setCivDirectoryFinal}
+                  currentSelection={currentSelection}
+                  tileInfoDirectory={tileInfoDirectory}
+                  setTileInfoDirectory={setTileInfoDirectory}
                 />
               }
             ></Route>
