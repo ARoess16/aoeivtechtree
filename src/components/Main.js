@@ -47,7 +47,10 @@ function Main(props) {
             value={civtiles[i].value}
             id={civtiles[i].id}
             title={civtiles[i].Name}
-            onClick={(event) => updateCurrentSelection(event)}
+            onClick={(event) => {
+              const selectedID = event.currentTarget.id;
+              updateCurrentSelection(selectedID);
+            }}
           >
             <div className="card-image mainbg">
               <figure className="image">
